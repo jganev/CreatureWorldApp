@@ -1,6 +1,7 @@
 import processing.core.PApplet;
 import processing.core.PImage;
 
+
 public class Cheese extends CreatureWorldThing {
     private PImage img;
     private float ydirection;

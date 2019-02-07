@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CreatureWorldThing {
     private int id;
     private float x;
@@ -48,7 +50,7 @@ public class CreatureWorldThing {
 
     }
 
-    public void interact(CreatureWorldThing[] things){
+    public void interact(ArrayList<CreatureWorldThing> things){
 
     }
 

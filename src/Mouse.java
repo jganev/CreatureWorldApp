@@ -1,5 +1,6 @@
 import processing.core.PApplet;
 import processing.core.PImage;
+import java.util.ArrayList;
 
 public class Mouse extends CreatureWorldThing{
     private PImage[] images;
@@ -39,13 +40,13 @@ public class Mouse extends CreatureWorldThing{
     public void behave(){
     }
 
-    public void interact(CreatureWorldThing[] things){
-        for (int i = 0; i < things.length; i++){
-            if (app.dist(getX(), getY(), things[i].getX(), things[i].getY())< 25){
-                if (things[i].getID()== 3){
+    public void interact(ArrayList<CreatureWorldThing> things){ //how do I change this?
+        for (int i = 0; i < things.size(); i++){
+            if (app.dist(getX(), getY(), things.get(i).getX(), things.get(i).getY())< 25){
+                if (things.get(i).getID()== 3){
                     imageIndex = 1;
                     app.playDing();
-                } else if (things[i].getID()== 0 || things[i].getID()== 1){
+                } else if (things.get(i).getID()== 0 || things.get(i).getID()== 1){
                     imageIndex = 2;
                 }
             }
